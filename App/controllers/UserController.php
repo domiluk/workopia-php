@@ -43,10 +43,10 @@ class UserController
    */
   public function store()
   {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
+    $name = sanitize($_POST['name']);
+    $email = sanitize($_POST['email']);
+    $city = sanitize($_POST['city']);
+    $state = sanitize($_POST['state']);
     $password = $_POST['password'];
     $passwordConfirmation = $_POST['password_confirmation'];
 
